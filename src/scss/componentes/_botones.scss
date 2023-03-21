@@ -1,0 +1,24 @@
+@use '../custom' as *;
+
+.btn-header {
+    // BG, Border, Color Texto, HOVER, Bg Border, Texto
+    @include button-variant( $primary, transparent, $secondary,darken($primary, 10%), transparent, darken($secondary, 10%));
+    @include button-size( 1rem, 5rem, 2rem, 0 );
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    margin-top: 1rem;
+
+    @include media-breakpoint-up(md) {
+    display: inline-block;
+    }
+}
+
+.boton-plan {
+    @extend .btn-header;
+    border:  1px solid $white;
+
+    @include media-breakpoint-up(md) {
+        display: block;
+        }
+}
